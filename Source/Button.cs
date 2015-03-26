@@ -38,7 +38,7 @@
 			button.playAudioEvents = true;
 
 			// Place the button.
-			button.transformPosition = new Vector3(-1.65f, 0.97f);
+			button.transformPosition = new Vector3(-1.75f, 0.87f);
 
 			// Respond to button click.
 			button.eventClick += ButtonClick;
