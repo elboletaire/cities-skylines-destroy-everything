@@ -6,6 +6,8 @@
 
 	public class Button : LoadingExtensionBase
 	{
+		public UIButton button;
+
 		public override void OnLevelLoaded(LoadMode mode)
 		{
 			// Get the UIView object. This seems to be the top-level object for most
@@ -13,7 +15,7 @@
 			var uiView = UIView.GetAView();
 
 			// Add a new button to the view.
-			var button = (UIButton)uiView.AddUIComponent(typeof(UIButton));
+			button = (UIButton)uiView.AddUIComponent(typeof(UIButton));
 
 			// Set the text to show on the button.
 			button.text = "Destroy everything!";
@@ -37,16 +39,24 @@
 			// Enable button sounds.
 			button.playAudioEvents = true;
 
-			// Place the button.
-			button.transformPosition = new Vector3(-1.75f, 0.87f);
+			// Place the button near the bulldoze icon
+			button.transformPosition = new Vector3(1.3f, -0.85f);
 
 			// Respond to button click.
 			button.eventClick += ButtonClick;
+			Debug.Log("DEYC: UI button created");
+		}
+
+		public override void OnLevelUnloading()
+		{
+			// Apparently does nothing :D
+			Object.Destroy(button);
 		}
 
 		private void ButtonClick(UIComponent component, UIMouseEventParameter eventParam)
 		{
 			Destroyer.destroyEverything = true;
+			Debug.Log("Pressed destroyAll button");
 		}
 	}
 }

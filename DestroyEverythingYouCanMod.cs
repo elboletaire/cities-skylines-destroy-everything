@@ -1,13 +1,12 @@
 ﻿namespace DestroyEverythingYouCan
 {
 	using ICities;
-	using UnityEngine;
 
 	public class DestroyEverythingYouCanMod: IUserMod
 	{
 		public string Name
 		{
-			get { return "Destroy everything you can."; }
+			get { return "Destroy everything you can"; }
 		}
 
 		public string Description
