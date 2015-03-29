@@ -6,20 +6,19 @@ A W.I.P. Mod which will allow you to destroy all your buildings at once.
 Done
 ----
 
-- Added a button to destroy all the buildings.
+- Added a button to destroy all the buildings (just those that grew automatically).
 
 Known issues
 ------------
 
-- After using the `destroy everything!` button you cannot load a game from the
-  same game. You'll need to go to the main menu to load it or Cities will crash
-  —I think I've seen other mods doing this before.. if so, maybe it's a game bug.
-- After destroying everything it takes a long after far scenes are rendered again.
+- For huge cities (more than 10K citizens) it takes so long to destroy all the
+  buildings. I recommend you to pause the game before destroying everything in
+  those cases.
 
 TODO
 ----
-- Destroy roads, tubes and other connection paths.
 - Display a list of building types to destroy just one building type at once.
+- Destroy roads, tubes and other connection paths.
 - Burn buildings (just for fun)
 - Try to destroy buildings that require to be voided first (like dumps or the
   cementery).
